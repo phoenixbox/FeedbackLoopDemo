@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZKK-Nf-AP1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="eoW-Ep-d9s">
+            <objects>
+                <viewController id="ZKK-Nf-AP1" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BNE-Tu-If9"/>
+                        <viewControllerLayoutGuide type="bottom" id="FMf-Z0-pe8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pVw-Hj-vk7" userLabel="Content">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6UV-c2-nok" userLabel="ScrollContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44H-8k-ggU" customClass="TPKeyboardAvoidingScrollView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hero" translatesAutoresizingMaskIntoConstraints="NO" id="OLx-KB-0nH">
+                                                <rect key="frame" x="20" y="85" width="334" height="100"/>
+                                                <color key="backgroundColor" red="0.0" green="0.95509526180000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="4tl-lL-eaA"/>
+                                                    <constraint firstAttribute="width" constant="100" id="7vy-h6-kvW"/>
+                                                    <constraint firstAttribute="width" secondItem="OLx-KB-0nH" secondAttribute="height" multiplier="167:50" id="VRi-xU-gek"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7vy-h6-kvW"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email to chat :)" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vi5-YV-tZ4">
+                                                <rect key="frame" x="20" y="360" width="334" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="fAD-1h-A3l"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ZKK-Nf-AP1" id="UZj-Xp-uPq"/>
+                                                </connections>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CanYouHelpMe" translatesAutoresizingMaskIntoConstraints="NO" id="bm7-t3-qWg">
+                                                <rect key="frame" x="20" y="193" width="333" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bm7-t3-qWg" secondAttribute="height" multiplier="334:147" id="XCO-9u-nVK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid email!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nK-mE-Rvk">
+                                                <rect key="frame" x="135" y="452" width="104" height="24"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.15770537009999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sy-AL-1PU">
+                                                <rect key="frame" x="93" y="445" width="188" height="40"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="CD3-2l-EPC"/>
+                                                    <constraint firstAttribute="width" constant="188" id="ouh-GH-j6d"/>
+                                                </constraints>
+                                                <state key="normal" image="ChatWithUs" backgroundImage="ChatWithUs">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startChat:" destination="ZKK-Nf-AP1" eventType="touchUpInside" id="0Hw-5M-zrx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.36033970980000002" green="1" blue="0.3746896254" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bm7-t3-qWg" secondAttribute="trailing" constant="21" id="0hL-11-Wl3"/>
+                                            <constraint firstItem="OLx-KB-0nH" firstAttribute="centerX" secondItem="44H-8k-ggU" secondAttribute="centerX" id="6iy-M2-zkh"/>
+                                            <constraint firstItem="vi5-YV-tZ4" firstAttribute="top" secondItem="bm7-t3-qWg" secondAttribute="bottom" constant="20" id="C6w-wb-f2J"/>
+                                            <constraint firstItem="4Sy-AL-1PU" firstAttribute="centerY" secondItem="7nK-mE-Rvk" secondAttribute="centerY" constant="0.5" id="Mtv-BK-FhD"/>
+                                            <constraint firstAttribute="bottom" secondItem="OLx-KB-0nH" secondAttribute="bottom" constant="482" id="QMx-F4-T6e"/>
+                                            <constraint firstItem="OLx-KB-0nH" firstAttribute="leading" secondItem="44H-8k-ggU" secondAttribute="leading" constant="20" id="Sxx-Tg-J1n"/>
+                                            <constraint firstAttribute="bottom" secondItem="OLx-KB-0nH" secondAttribute="bottom" constant="482" id="T7Z-cM-4uf"/>
+                                            <constraint firstItem="vi5-YV-tZ4" firstAttribute="leading" secondItem="44H-8k-ggU" secondAttribute="leading" constant="20" id="WAC-QT-HrC"/>
+                                            <constraint firstItem="bm7-t3-qWg" firstAttribute="top" secondItem="OLx-KB-0nH" secondAttribute="bottom" constant="8" id="XKV-se-1Tw"/>
+                                            <constraint firstItem="OLx-KB-0nH" firstAttribute="top" secondItem="44H-8k-ggU" secondAttribute="top" constant="85" id="c2h-7d-XxT"/>
+                                            <constraint firstAttribute="centerX" secondItem="4Sy-AL-1PU" secondAttribute="centerX" id="gCv-Sy-urD"/>
+                                            <constraint firstItem="bm7-t3-qWg" firstAttribute="leading" secondItem="44H-8k-ggU" secondAttribute="leading" constant="20" id="jDX-Tc-UvV"/>
+                                            <constraint firstItem="4Sy-AL-1PU" firstAttribute="centerX" secondItem="7nK-mE-Rvk" secondAttribute="centerX" id="nrG-a7-fJp"/>
+                                            <constraint firstItem="vi5-YV-tZ4" firstAttribute="top" secondItem="OLx-KB-0nH" secondAttribute="bottom" constant="200" id="oQH-wy-R6v"/>
+                                            <constraint firstAttribute="trailing" secondItem="vi5-YV-tZ4" secondAttribute="trailing" constant="20" id="wC9-TD-C7q"/>
+                                            <constraint firstItem="4Sy-AL-1PU" firstAttribute="top" secondItem="vi5-YV-tZ4" secondAttribute="bottom" constant="45" id="xAl-Vn-U8R"/>
+                                            <constraint firstAttribute="trailing" secondItem="OLx-KB-0nH" secondAttribute="trailing" constant="20" id="zoR-fC-ytV"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="T7Z-cM-4uf"/>
+                                                <exclude reference="oQH-wy-R6v"/>
+                                            </mask>
+                                        </variation>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="44H-8k-ggU" secondAttribute="trailing" id="UdN-k4-CIP"/>
+                                    <constraint firstAttribute="bottom" secondItem="44H-8k-ggU" secondAttribute="bottom" id="XFN-g1-HdO"/>
+                                    <constraint firstItem="44H-8k-ggU" firstAttribute="leading" secondItem="6UV-c2-nok" secondAttribute="leading" id="Y3e-QA-XOe"/>
+                                    <constraint firstItem="44H-8k-ggU" firstAttribute="top" secondItem="6UV-c2-nok" secondAttribute="top" id="qve-km-J9g"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6UV-c2-nok" firstAttribute="top" secondItem="BNE-Tu-If9" secondAttribute="bottom" constant="-20" id="OzW-qW-1Wr"/>
+                            <constraint firstItem="6UV-c2-nok" firstAttribute="leading" secondItem="pVw-Hj-vk7" secondAttribute="leadingMargin" constant="-16" id="dDH-p0-4wf"/>
+                            <constraint firstItem="FMf-Z0-pe8" firstAttribute="top" secondItem="6UV-c2-nok" secondAttribute="bottom" id="j85-jz-1qM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6UV-c2-nok" secondAttribute="trailing" constant="-16" id="oZG-ho-Lu7"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailInput" destination="vi5-YV-tZ4" id="kZV-NR-kmx"/>
+                        <outlet property="errorLabel" destination="7nK-mE-Rvk" id="sKn-1F-D6t"/>
+                        <outlet property="mainScrollView" destination="44H-8k-ggU" id="cC0-yR-09N"/>
+                        <outlet property="startChatButton" destination="4Sy-AL-1PU" id="Bgb-f5-2Bz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKz-Ia-gx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.5" y="578.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CanYouHelpMe" width="400" height="120"/>
+        <image name="ChatWithUs" width="188" height="40"/>
+        <image name="Hero" width="568" height="120"/>
+    </resources>
+</document>
