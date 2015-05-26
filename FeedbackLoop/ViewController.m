@@ -50,8 +50,8 @@
     button.userInteractionEnabled = NO;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     if  (![self validateEmail:_emailInput.text]) {
-        [_errorLabel setText:@"Invalid Email"];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_errorLabel setText:@"Invalid Email. Try again :)"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             [self.activityIndicatorView stopAnimating];
             [self shakeButton];
