@@ -10,13 +10,13 @@
 #import "FeedbackLoop.h"
 #import "TPKeyboardAvoidingScrollView.h"
 #import <POP/POP.h>
+#import "FBLProspectsStore.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet TPKeyboardAvoidingScrollView *mainScrollView;
 @property (weak, nonatomic) IBOutlet UITextField *emailInput;
 @property (nonatomic) UIActivityIndicatorView *activityIndicatorView;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
-
 @property (weak, nonatomic) IBOutlet UIButton *startChatButton;
 
 @end
@@ -49,14 +49,62 @@
     [self.activityIndicatorView startAnimating];
     button.userInteractionEnabled = NO;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        [self.activityIndicatorView stopAnimating];
-        [self shakeButton];
-        [self showLabel];
-    });
+    if  (![self validateEmail:_emailInput.text]) {
+        [_errorLabel setText:@"Invalid Email"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            [self.activityIndicatorView stopAnimating];
+            [self shakeButton];
+            [self showLabel];
+        });
+    } else {
+        NSString *email = _emailInput.text;
 
-//    [FeedbackLoop presentChatChannel];
+        NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
+        [DateFormatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+
+        NSDictionary *user = @{
+                               @"email": email,
+                               @"user_name": email,
+                               @"created_at": [DateFormatter stringFromDate:[NSDate date]],
+                               @"links": @{
+                                       @"referrer": @"ios_demo",
+                                       @"model": [UIDevice currentDevice].model,
+                                       @"systemName": [UIDevice currentDevice].systemName,
+                                       @"systemVersion": [UIDevice currentDevice].systemVersion
+                                       }
+                               };
+
+        void(^completionBlock)(NSError *error)=^(NSError *error) {
+            if (error == nil) {
+                [FeedbackLoop registerUnauthenticatedUser:user];
+                [FeedbackLoop presentChatChannel];
+            } else {
+                [_errorLabel setText:@"Cant connect to FeedbackLoop! Try Again :)"];
+                [self showLabel];
+            };
+        };
+
+        [[FBLProspectsStore sharedStore] createProspectForEmail:email withCompletionBlock:completionBlock];
+    }
+}
+
+- (BOOL)validateEmail:(NSString *)email {
+    if([email length]==0){
+        return NO;
+    }
+
+    NSString *regExPattern = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+
+    NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern
+                                                                      options:NSRegularExpressionCaseInsensitive error:nil];
+    NSUInteger regExMatches = [regEx numberOfMatchesInString:email options:0 range:NSMakeRange(0, [email length])];
+
+    if (regExMatches == 0) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
 
 #pragma mark Animations

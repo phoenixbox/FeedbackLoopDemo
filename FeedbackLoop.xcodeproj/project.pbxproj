@@ -15,6 +15,7 @@
 		CB8316CB1B13BEB000AD7195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8316CA1B13BEB000AD7195 /* Images.xcassets */; };
 		CB8316CE1B13BEB000AD7195 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8316CC1B13BEB000AD7195 /* LaunchScreen.xib */; };
 		CB8316DA1B13BEB000AD7195 /* FeedbackLoopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8316D91B13BEB000AD7195 /* FeedbackLoopTests.m */; };
+		CBD0CF3B1B14098000FA8B71 /* FBLProspectsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD0CF3A1B14098000FA8B71 /* FBLProspectsStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,9 @@
 		CB8316D31B13BEB000AD7195 /* FeedbackLoopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedbackLoopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8316D81B13BEB000AD7195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB8316D91B13BEB000AD7195 /* FeedbackLoopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackLoopTests.m; sourceTree = "<group>"; };
+		CBD0CF371B1408F300FA8B71 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		CBD0CF391B14098000FA8B71 /* FBLProspectsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLProspectsStore.h; sourceTree = "<group>"; };
+		CBD0CF3A1B14098000FA8B71 /* FBLProspectsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLProspectsStore.m; sourceTree = "<group>"; };
 		D3F702287B58DF399A60D134 /* Pods-FeedbackLoop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackLoop.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackLoop/Pods-FeedbackLoop.release.xcconfig"; sourceTree = "<group>"; };
 		E4EE4F5EF4FCB2FD16F24BD1 /* Pods-FeedbackLoop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackLoop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackLoop/Pods-FeedbackLoop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +109,7 @@
 		CB8316BC1B13BEB000AD7195 /* FeedbackLoop */ = {
 			isa = PBXGroup;
 			children = (
+				CBD0CF381B14095400FA8B71 /* Stores */,
 				CB8316C11B13BEB000AD7195 /* AppDelegate.h */,
 				CB8316C21B13BEB000AD7195 /* AppDelegate.m */,
 				CB8316C41B13BEB000AD7195 /* ViewController.h */,
@@ -113,6 +118,7 @@
 				CB8316CA1B13BEB000AD7195 /* Images.xcassets */,
 				CB8316CC1B13BEB000AD7195 /* LaunchScreen.xib */,
 				CB8316BD1B13BEB000AD7195 /* Supporting Files */,
+				CBD0CF371B1408F300FA8B71 /* AppConstants.h */,
 			);
 			path = FeedbackLoop;
 			sourceTree = "<group>";
@@ -141,6 +147,15 @@
 				CB8316D81B13BEB000AD7195 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBD0CF381B14095400FA8B71 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				CBD0CF391B14098000FA8B71 /* FBLProspectsStore.h */,
+				CBD0CF3A1B14098000FA8B71 /* FBLProspectsStore.m */,
+			);
+			name = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +295,7 @@
 			files = (
 				CB8316C61B13BEB000AD7195 /* ViewController.m in Sources */,
 				CB8316C31B13BEB000AD7195 /* AppDelegate.m in Sources */,
+				CBD0CF3B1B14098000FA8B71 /* FBLProspectsStore.m in Sources */,
 				CB8316C01B13BEB000AD7195 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
