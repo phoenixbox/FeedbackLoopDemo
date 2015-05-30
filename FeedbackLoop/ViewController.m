@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 FBL. All rights reserved.
 //
 
+#import <FeedbackLoop/FeedbackLoop.h>
+
 #import "ViewController.h"
-#import "FeedbackLoop.h"
 #import "TPKeyboardAvoidingScrollView.h"
 #import <POP/POP.h>
 #import "FBLProspectsStore.h"
@@ -54,7 +55,7 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             [self.activityIndicatorView stopAnimating];
-            [self shakeButton];
+            [self shakeAndEnableButton];
             [self showLabel];
         });
     } else {
@@ -109,13 +110,14 @@
 
 #pragma mark Animations
 
-- (void)shakeButton
+- (void)shakeAndEnableButton
 {
     POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
     positionAnimation.velocity = @2000;
     positionAnimation.springBounciness = 20;
     [positionAnimation setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
         _startChatButton.userInteractionEnabled = YES;
+        NSLog(@"LOGIN BUTTON READY AGAIN!");
     }];
     [_startChatButton.layer pop_addAnimation:positionAnimation forKey:@"positionAnimation"];
 }

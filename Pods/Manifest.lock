@@ -20,12 +20,13 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - FeedbackLoop (0.1.58):
+  - FeedbackLoop (0.1.67):
     - AFNetworking
     - JSONModel
     - JSQMessagesViewController
     - MBProgressHUD
     - SocketRocket
+    - URBMediaFocusViewController
   - JSONModel (1.1.0)
   - JSQMessagesViewController (7.0.2):
     - JSQSystemSoundPlayer (~> 2.0.1)
@@ -37,14 +38,14 @@ PODS:
   - URBMediaFocusViewController (0.5.8)
 
 DEPENDENCIES:
-  - FeedbackLoop (~> 0.1.6)
+  - FeedbackLoop (~> 0.1.67)
   - pop (~> 1.0)
   - TPKeyboardAvoiding (~> 1.2)
   - URBMediaFocusViewController (~> 0.5)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  FeedbackLoop: 72dd1b08d0d46d8f32743def902d1c89f75b281c
+  FeedbackLoop: ddca329c878e69926194e8afd57cb88aa0d73e9e
   JSONModel: ec77e9865236a7a09d9cf7668df6b4b328d9ec1d
   JSQMessagesViewController: bb6649691182b1899dc52b42266ad69efc473510
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d

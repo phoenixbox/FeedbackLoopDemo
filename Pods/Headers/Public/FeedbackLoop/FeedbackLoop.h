@@ -1,1 +1,1 @@
-../../../FeedbackLoop/FeedbackLoop.framework/Versions/A/Headers/FeedbackLoop.h
+../../../FeedbackLoop/FeedbackLoopSDK.framework/Versions/A/Headers/FeedbackLoop.h

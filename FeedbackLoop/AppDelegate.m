@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "FeedbackLoop.h"
+#import <FeedbackLoop/FeedbackLoop.h>
 
 @interface AppDelegate ()
 
@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [FeedbackLoop initWithAppId:@"64a702c6-d868-480a-aff1-1ec6ab90e267"];
+    //    30dc6a3e-77e6-4a8a-9e7d-35a7b2f442fc - FeedbackLoop Token
+    [FeedbackLoop initWithAppId:@"032c2adc-76f8-4ba6-b1ff-5602e8d432d9"];
     
     return YES;
 }

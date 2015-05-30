@@ -4,52 +4,52 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-FeedbackLoop-AFNetworking.xcscheme</key>
+		<key>Pods-FeedbackLoopChat-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FeedbackLoop-JSONModel.xcscheme</key>
+		<key>Pods-FeedbackLoopChat-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FeedbackLoop-JSQMessagesViewController.xcscheme</key>
+		<key>Pods-FeedbackLoopChat-JSQMessagesViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FeedbackLoop-JSQSystemSoundPlayer.xcscheme</key>
+		<key>Pods-FeedbackLoopChat-JSQSystemSoundPlayer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FeedbackLoop-MBProgressHUD.xcscheme</key>
+		<key>Pods-FeedbackLoopChat-MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FeedbackLoop-SocketRocket.xcscheme</key>
+		<key>Pods-FeedbackLoopChat-SocketRocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FeedbackLoop-TPKeyboardAvoiding.xcscheme</key>
+		<key>Pods-FeedbackLoopChat-TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FeedbackLoop-URBMediaFocusViewController.xcscheme</key>
+		<key>Pods-FeedbackLoopChat-URBMediaFocusViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FeedbackLoop-pop.xcscheme</key>
+		<key>Pods-FeedbackLoopChat-pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-FeedbackLoop.xcscheme</key>
+		<key>Pods-FeedbackLoopChat.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,52 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1D2BFACCFD2EB619BA008220</key>
+		<key>4513F8BBB5776802DAC7F98A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29EE37D6550FD92969E2DA24</key>
+		<key>5E4FAB7CD02D618CD0571F28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>799CFF1147A1136F2BF65DC1</key>
+		<key>86360E193F2EA7A38943315E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C4CC9DAF585A36A0F6251E1</key>
+		<key>C166B2CE1EAABD3C74DA0031</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A47BA00FC2EB0B39F0166DFC</key>
+		<key>CFAC38BFDEC3892A50CE9FA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A4FD625073FA91661663D69B</key>
+		<key>D50C6233D4586562EDC0D8A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7AB8E41122C14B694A38959</key>
+		<key>DCF524693A7EDCFC50CE58AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6C474053BA529CE431CE549</key>
+		<key>E478D0DEF54167CF3C770E72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E0242FEA65B6A636827BFABF</key>
+		<key>F2A8FEB2FA94130FE0E9456E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB69C6FB5781C7064E3789DC</key>
+		<key>FB03AEB1C41D2B47A3F14B4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

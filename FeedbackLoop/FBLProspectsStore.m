@@ -30,13 +30,13 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
 
-    NSString *base = PROD_BASE_URL;
+    NSString *BASE = PROD_BASE_URL;
     // Reassign for local development
 #ifdef DEBUG
-    base = DEV_BASE_URL;
+    BASE = DEV_BASE_URL;
 #endif
 
-    NSString *requestUrl = [base stringByAppendingString:PROSPECTS_ENDPOINT];
+    NSString *requestUrl = [BASE stringByAppendingString:PROSPECTS_ENDPOINT];
     NSDictionary *prospectParams = @{@"prospect":
                                             @{
                                              @"email": email
