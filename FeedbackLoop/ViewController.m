@@ -81,7 +81,7 @@
                 [FeedbackLoop registerUnauthenticatedUser:user];
                 [FeedbackLoop presentChatChannel];
             } else {
-                [_errorLabel setText:@"Cant connect to FeedbackLoop! Try Again :)"];
+                [_errorLabel setText:@"Cant connect! Try Again :)"];
                 [self showLabel];
             };
         };
